@@ -59,9 +59,10 @@
 
   .item-d {
     grid-area: projects;
-    align-self: center;
+    align-self: start;
     justify-self: start;
     color:#000DFF;
+		padding-top: 5px;
   }
 
   .item-d a{
@@ -75,11 +76,13 @@
     justify-self: start;
     color:#FF3566;
     font-size: 12px;
+		padding-bottom: 20px;
   }
 
   .item-f {
     grid-area: cv;
     justify-self: end;
+		padding-bottom: 20px;
   }
 
   .item-f a{
@@ -89,15 +92,17 @@
   }
 
   .container {
-    height: 140vh;
+		min-height: 100vh;
+		padding-top: 15px;
+		padding-bottom: 25px;
     width: 100%;
     display: grid;
     grid-template-columns: 20% 60%;
     justify-content: center;
-    align-content: space-evenly;
+		align-content: space-between;
     grid-template-rows: 5% 50% 20% 5%;
     grid-column-gap: 5%;
-    grid-row-gap: 5%;
+    grid-row-gap: 50px;
     grid-template-areas:
       "logo nav"
       "desc desc"
@@ -107,7 +112,6 @@
 
     @media only screen and (min-width: 800px)   {
 		    .container {
-          height: 100vh;
           grid-template-rows: 5% 70% 5%;
 			  	grid-template-areas:
           "logo nav"

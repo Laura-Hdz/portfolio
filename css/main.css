@@ -84,13 +84,15 @@
   }
 
   .container {
-    height: 100vh;
+    min-height: 100vh;
+		padding-top: 15px;
+		padding-bottom: 15px;
     width: 100%;
     display: grid;
     grid-template-columns: 20% 60%;
     justify-content: center;
-    align-content: space-evenly;
-    grid-template-rows: 5% 50% 20% 5%;
+  	align-content: space-between;	
+	  grid-template-rows: 5% 50% 20% 5%;
     grid-column-gap: 5%;
     grid-row-gap: 5%;
     grid-template-areas:

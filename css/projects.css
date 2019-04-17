@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo|Quicksand:700');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*this only affects padding and border; meaning when adding padding it will add inside of the box and not increase the width; BUT it will increase the width when using margin*/
+	font-family: 'Quicksand', sans-serif;
+	}
+
+	.item-a {
+    grid-area: logo;
+    justify-self: start;
+  }
+
+  .item-a img{
+    height: 40px;
+  }
+
+  .item-b {
+    grid-area: nav;
+    justify-self: end;
+    color:#000DFF;
+  }
+
+	.item-b a{
+		color:#000DFF;
+		text-decoration: none;
+	}
+
+
+  .item-c {
+    grid-area: desc;
+    color:#000DFF;
+		overflow: scroll;
+  }
+
+  .item-c h1{
+    font-size: 30px;
+  }
+
+  .item-c h2{
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color:#000DFF;
+  }
+
+  .item-c p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #39323F;
+    padding-bottom: 10px;
+		font-family: 'Heebo',sans-serif;
+  }
+
+	.item-c img {
+		max-width: 100%;
+	}
+
+  .item-d {
+    grid-area: projects;
+    align-self: center;
+    justify-self: start;
+    color:#000DFF;
+  }
+
+  .item-d a{
+    color:#000DFF;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  .item-e {
+    grid-area: email;
+    justify-self: start;
+    color:#FF3566;
+    font-size: 12px;
+  }
+
+  .item-f {
+    grid-area: cv;
+    justify-self: end;
+  }
+
+  .item-f a{
+    color:#FF3566;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+  .container {
+    height: 140vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 60%;
+    justify-content: center;
+    align-content: space-evenly;
+    grid-template-rows: 5% 50% 20% 5%;
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+    grid-template-areas:
+      "logo nav"
+      "desc desc"
+      "projects projects"
+      "email cv";
+  }
+
+    @media only screen and (min-width: 800px)   {
+		    .container {
+          height: 100vh;
+          grid-template-rows: 5% 70% 5%;
+			  	grid-template-areas:
+          "logo nav"
+          "projects desc"
+          "email cv";
+				}
+        .item-c h1{
+          font-size: 40px;
+        }
+        .item-c h2{
+          font-size: 15px;
+        }
+
+        .item-c p{
+          font-size: 15px;
+        }
+
+        .item-d {
+          justify-self: start;
+        }
+			}

@@ -44,10 +44,10 @@
   }
 
 	.item-c p{
-		font-size: 15px;
+		font-size: 12px;
 		color:#39323F;
 		font-family: 'Heebo',sans-serif;
-		padding-top: 15px;
+		padding-top: 10px;
 	}
 
   .item-d {
@@ -88,7 +88,7 @@
     grid-template-columns: 20% 60%;
     justify-content: center;
     align-content: space-evenly;
-    grid-template-rows: 5% 40% 30% 5%;
+    grid-template-rows: 5% 50% 20% 5%;
     grid-column-gap: 5%;
     grid-row-gap: 5%;
     grid-template-areas:

@@ -5,8 +5,15 @@
 	padding: 0;
 	box-sizing: border-box; /*this only affects padding and border; meaning when adding padding it will add inside of the box and not increase the width; BUT it will increase the width when using margin*/
 	font-family: 'Quicksand', sans-serif;
-	}
+	overflow-y: scroll;
+scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;
+}
 
+*::-webkit-scrollbar { /* WebKit */
+	width: 0;
+	height: 0;
+}
 	.item-a {
     grid-area: logo;
     justify-self: start;
@@ -32,10 +39,11 @@
     grid-area: desc;
     color:#000DFF;
 		overflow: scroll;
+		text-align: center;
   }
 
   .item-c h1{
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .item-c h2{
@@ -46,23 +54,32 @@
   }
 
   .item-c p{
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 400;
     color: #39323F;
     padding-bottom: 10px;
 		font-family: 'Heebo',sans-serif;
+		text-align: left;
   }
+
+	.item-c a{
+		text-align: center;
+		font-size: 12px;
+		color:#9836FF;
+    text-decoration: none;
+	}
 
 	.item-c img {
 		max-width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 
   .item-d {
     grid-area: projects;
-    align-self: start;
+    align-self: center;
     justify-self: start;
     color:#000DFF;
-		padding-top: 5px;
   }
 
   .item-d a{
@@ -74,50 +91,58 @@
   .item-e {
     grid-area: email;
     justify-self: start;
-    color:#FF3566;
+		align-self: end;
+    color:#9836FF;
     font-size: 12px;
-		padding-bottom: 20px;
   }
+
+	.item-e a{
+			color:#9836FF;
+			text-decoration: none;
+			font-size: 12px;
+		}
 
   .item-f {
     grid-area: cv;
+		align-self: end;
     justify-self: end;
-		padding-bottom: 20px;
   }
 
   .item-f a{
-    color:#FF3566;
+    color:#9836FF;
     text-decoration: none;
     font-size: 12px;
   }
 
   .container {
-		min-height: 100vh;
-		padding-top: 15px;
-		padding-bottom: 25px;
-    width: 100%;
+		height: 100vh;
+		padding: 20px;
     display: grid;
-    grid-template-columns: 20% 60%;
+		grid-template-columns: 2fr 5fr 2fr;
     justify-content: center;
-		align-content: space-between;
-    grid-template-rows: 5% 50% 20% 5%;
-    grid-column-gap: 5%;
-    grid-row-gap: 50px;
+	  grid-template-rows: 1fr 7fr 2fr 1fr;
+		grid-gap: 10px;
     grid-template-areas:
-      "logo nav"
-      "desc desc"
-      "projects projects"
-      "email cv";
+      "logo . nav"
+      "desc desc desc"
+      "projects projects projects"
+      "email . cv";
   }
 
-    @media only screen and (min-width: 800px)   {
+@media only screen and (min-width : 1024px)  {
 		    .container {
-          grid-template-rows: 5% 70% 5%;
+					padding: 50px;
+          grid-template-rows: 1fr 8fr 1fr;
 			  	grid-template-areas:
-          "logo nav"
-          "projects desc"
-          "email cv";
+          "logo . nav"
+          "projects desc . "
+          "email . cv";
 				}
+
+				.item-a img{
+					height: 50px;
+				}
+
         .item-c h1{
           font-size: 40px;
         }

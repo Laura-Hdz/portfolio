@@ -136,7 +136,7 @@ scrollbar-width: none; /* Firefox */
 			  	grid-template-areas:
           "logo . nav"
           "projects desc . "
-          "email . cv";
+          "email desc cv";
 				}
 
 				.item-a img{
